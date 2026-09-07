@@ -1,0 +1,291 @@
+/* Buzón CUC Escucha
+   Paleta: papel cálido, tinta azul-verdosa, acento rojo tipo sello postal.
+   Tipografía: Fraunces (display) + Work Sans (cuerpo). */
+
+:root {
+  --paper: #F6F1E6;
+  --ink: #1E2B28;
+  --sage: #4F6D5C;
+  --stamp-red: #B4443A;
+  --gold-line: #C79A3E;
+  --paper-card: #FFFDF8;
+  --max-width: 1040px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+h1, h2 {
+  font-family: 'Fraunces', serif;
+  color: var(--ink);
+  margin: 0;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+
+.site-header {
+  border-bottom: 1px solid rgba(30, 43, 40, 0.15);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 24px;
+}
+
+.mark {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--paper-card);
+  background: var(--sage);
+  padding: 6px 10px;
+  border-radius: 3px;
+  letter-spacing: 0.04em;
+}
+
+.header-title {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Hero */
+
+.hero {
+  padding: 72px 0 64px;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.hero-text {
+  flex: 1 1 480px;
+}
+
+.kicker {
+  color: var(--sage);
+  font-weight: 600;
+  margin: 0 0 14px;
+  font-size: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 500;
+  line-height: 1.12;
+  margin-bottom: 22px;
+}
+
+.hero-lede {
+  max-width: 46ch;
+  color: rgba(30, 43, 40, 0.82);
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--sage);
+  color: var(--paper-card);
+  border: none;
+  padding: 14px 28px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: #3d5748;
+}
+
+.hero-stamp {
+  flex: 0 0 220px;
+  transform: rotate(4deg);
+}
+
+.stamp-svg { width: 100%; height: auto; }
+
+.stamp-body {
+  fill: var(--paper-card);
+  stroke: var(--stamp-red);
+  stroke-width: 4;
+  stroke-dasharray: 9 7;
+}
+
+.stamp-word {
+  font-family: 'Fraunces', serif;
+  font-size: 26px;
+  fill: var(--stamp-red);
+}
+
+.stamp-word-small {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  fill: var(--sage);
+  letter-spacing: 0.08em;
+}
+
+/* Categorias */
+
+.categorias {
+  padding: 48px 0;
+  border-top: 1px solid rgba(30, 43, 40, 0.12);
+  border-bottom: 1px solid rgba(30, 43, 40, 0.12);
+}
+
+.categorias h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+
+.categoria-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+}
+
+.categoria-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 500;
+}
+
+.cat-letter {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  color: var(--paper-card);
+  background: var(--gold-line);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+/* Formulario */
+
+.formulario-section {
+  padding: 64px 0 88px;
+}
+
+.postcard {
+  background: var(--paper-card);
+  border: 1px solid rgba(30, 43, 40, 0.15);
+  border-radius: 6px;
+  padding: 44px;
+  max-width: 620px;
+  margin: 0 auto;
+  box-shadow: 0 1px 0 rgba(30, 43, 40, 0.06);
+}
+
+.postcard-heading h2 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.postcard-heading p {
+  color: rgba(30, 43, 40, 0.7);
+  margin: 0 0 28px;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  border: 1px solid rgba(30, 43, 40, 0.3);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 2px solid var(--sage);
+  outline-offset: 1px;
+}
+
+.field textarea { resize: vertical; }
+
+.form-mensaje {
+  margin: 16px 0 0;
+  font-weight: 600;
+  color: var(--sage);
+  min-height: 1.4em;
+}
+
+/* Footer */
+
+.site-footer {
+  padding: 28px 0 40px;
+  color: rgba(30, 43, 40, 0.6);
+  font-size: 14px;
+}
+
+/* Responsive */
+
+@media (max-width: 720px) {
+  .hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-stamp {
+    flex: none;
+    width: 160px;
+  }
+  .postcard {
+    padding: 30px 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn-primary { transition: none; }
+}
